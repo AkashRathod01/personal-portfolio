@@ -1,0 +1,245 @@
+@import "../../global.scss";
+
+.experiences {
+    background-color: #f3f4fd;
+
+    .row1 {
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile {
+            height: 15%;
+        }
+
+        p {
+            color: #aaaaaa;
+            width: 100%;
+            margin: 10px 0;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            display: flex;
+            justify-content: center;
+
+            @include mobile {
+                margin: 4px 0;
+                font-size: 14px;
+            }
+        }
+
+        h2 {
+            width: 100%;
+            font-family: 'Crete Round', serif;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 1px;
+            letter-spacing: 4px;
+            color: #33629e;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+
+            @include mobile {
+                margin: 6px;
+                font-size: 28px;
+            }
+        }
+    }
+
+    .row2 {
+        display: flex;
+        justify-content: center;
+        height: 80%;
+
+        @include mobile {
+            height: 85%;
+            flex-direction: column;
+        }
+
+
+        .education,
+        .experience {
+            flex: 0 0 50%;
+            max-width: 45%;
+            // margin-top: 30px;
+
+            @include mobile {
+                max-width: 100%;
+            }
+
+            .title {
+                font-family: 'Crete Round', serif;
+                font-size: 22px;
+                padding: 1px;
+                letter-spacing: 2px;
+                color: #292929;
+                margin-bottom: 30px;
+                font-weight: 700;
+                padding-left: 30px;
+
+                @include mobile {
+                    margin-bottom: 14px;
+                    font-size: 18px;
+                }
+            }
+
+            .timeline-box {
+                flex: 0 0 100%;
+                max-width: 100%;
+                // background-color: red;
+                display: flex;
+                justify-content: center;
+                // height: 460px;
+
+                .timeline {
+                    background-color: white;
+                    padding: 30px 15px;
+                    border: 1px solid rgba(155, 155, 155, 0.5);
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    width: 80%;
+                    position: relative;
+                    transition: all 0.5s ease;
+                    cursor: pointer;
+
+                    @include mobile {
+                        padding: 20px 15px;
+                    }
+
+                    .timeline-item {
+                        position: relative;
+                        padding-left: 37px;
+                        padding-bottom: 32px;
+
+                        @include mobile {
+                            padding-left: 26px;
+                            padding-bottom: 0;
+                        }
+
+                        .circle-dot {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 15px;
+                            width: 15px;
+                            border-radius: 50%;
+                            background-color: #33629e;
+                        }
+                    }
+
+                    .timeline-item:last-child {
+                        padding-bottom: 0;
+                    }
+
+                    .timeline-item::before {
+                        content: '';
+                        width: 1px;
+                        position: absolute;
+                        height: 100%;
+                        left: 7px;
+                        top: 0;
+                        background-color: #33629e;
+                    }
+
+                    .timeline-date {
+                        font-family: 'PT Serif', serif;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        margin-bottom: 12px;
+                        color: #838383;
+
+                        @include mobile {
+                            font-size: 12px;
+                            margin-bottom: 6px;
+                        }
+
+                        .calendarIcon {
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 5px;
+                            color: #555555;
+
+                            @include mobile {
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+                    }
+
+                    .timeline-heading {
+                        font-family: 'Crete Round', serif;
+                        font-size: 900;
+                        display: none;
+
+                        @include mobile {
+                            font-size: 22px;
+                            padding: 1px 0;
+                            margin: 0;
+                            display: inline-block;
+                        }
+                    }
+
+                    .timeline-title {
+                        font-family: 'Crete Round', serif;
+                        font-size: 20px;
+                        padding: 1px;
+                        letter-spacing: 1px;
+                        text-transform: capitalize;
+                        color: #2b2b2b;
+
+                        @include mobile {
+                            font-size: 16px;
+                            margin-bottom: 20px;
+                            color: #545454;
+                        }
+                    }
+
+                    .mob-title {
+                        @include mobile {
+                            font-size: 22px;
+                            color: black;
+                        }
+                    }
+
+                    .timeline-text {
+                        font-family: 'PT Serif', serif;
+                        font-size: 14px;
+                        text-align: justify;
+                        color: #838383;
+                        margin: 0;
+
+                        @include mobile {
+                            display: none;
+                        }
+                    }
+
+                    .title-last {
+                        @include mobile {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .timeline:hover {
+                    background-color: gainsboro;
+                }
+            }
+        }
+
+        .education {
+            @include mobile {
+                flex: auto;
+            }
+        }
+
+        .experience {
+            @include mobile {
+                flex: auto;
+            }
+        }
+    }
+}

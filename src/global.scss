@@ -1,0 +1,25 @@
+$mainColor: #1a1818;
+// $mainColor: #16182c;
+// $mainColor: #161b21;
+
+$width-tablet: 1200px;
+$width-mobile: 620px;
+// $height-mobile: 916px;
+
+@mixin tablet {
+    @media (max-width: #{$width-tablet}) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$width-mobile}) {
+        @content
+    }
+}
+
+// @mixin mobile-height {
+//     @media (max-height: #{$height-mobile}) {
+//         @content
+//     }
+// }
